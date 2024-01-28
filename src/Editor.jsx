@@ -10,7 +10,7 @@ export default function Editor() {
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
   useEffect(() => {
-    const sock = io("http://localhost:3000");
+    const sock = io(import.meta.env.VITE_WEBSOCKET_URL);
     setSocket(sock);
     return () => {
       sock.disconnect();
