@@ -9,6 +9,7 @@ import {
   Link,
   useLocation,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { v4 as uuidv4 } from "uuid";
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Analytics />
     </>
   );
 }
